@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+#top-bar{
+	border-top: 3px solid #976b2e;
+}
+
+.b-top-links {
+	border-top: 1px solid #976b2e;
+}
+.product-tab .tbs li.current a{
+	background:#976b2e !important;
+}
+#main-nav li a:hover, .post-bar h3, #horizontal-tabs ul.tabs li.current, .comm-list label, #accordion h3 a, .product-detail h3, .product-tab h3, .product-tab h4,
+.product-list li, .item-price, .popular-box h4,
+.author-art .title, .art-link, .art-link a, .art-bottom, .num-post, .comments li .author-name, .blog-main p a, .status, .cat-title, .t-author, #vertical-tabs ul.tabs li.current, .sub-title, #main-nav li.active a, .title4, #main-nav li .mega-menu ul li.active a{
+	color: #976b2e;
+}
+.sep-line, .more-btn, .starburst, .starburst span, .meter > span, .sendbtn, .career-list, .comments-icon, .heading-bar, #toggle-view li h3, .dropcap.color, .pagination li a.prev, .pagination li a.next, .post-date, .contact-box-bg{
+	background-color:#976b2e ;
+}
+.sale-ribbon{
+	background:url(../../images/sale-img-golden.png) no-repeat;
+}
+.top-login{
+	background:#976b2e;
+}
+.top-login:hover{
+	background:#c4985a;
+}
+#main-nav li ul li.active a{
+	background:#c4985a !important;
+}
+#main-nav li ul li a:hover{
+	background:#c4985a !important;
+}
+.sendbtn:hover, .more-btn:hover, .meter, .pagination li a.prev:hover, .pagination li a.next:hover, .pagination li a.prev:hover, .pagination li a.next:hover {
+	background:#c4985a !important;
+}
+.b-top-links {
+	border-bottom: 1px solid #976b2e;
+}
+.left-col-list li a:hover {
+	background: url(../../images/left-nav-hover-golden.jpg) no-repeat 0 14px;
+	color: #c4985a;
+}
+.comments-icon {
+	border:4px solid #976b2e;
+}
+.comments-icon:before, .comments-icon:after, .comments-icon:after {
+	border-top: 7px solid #c4985a;
+}
+.title-bar {
+	border-bottom: 3px solid #c4985a;
+}
+.cart-btn {
+	background: url(../../images/cart-icon.png) no-repeat 13% 7px #c4985a;
+}
+#main-nav li a:hover{
+	background: transparent;
+}
+.stayconnect li a span{
+	border: 4px solid #976b2e;
+	background:#976b2e;
+}
+.stayconnect li a span:after,
+.stayconnect li a span:before,
+.stayconnect li a span:after{
+	border-top: 7px solid #976b2e;
+}
+.blogbtn {
+    background: url(../../images/blog-btn-golden.png) no-repeat 0 0;}
+.b-top-links li {
+    background: url(../../images/blog-icon-golden.png) no-repeat 0 0 ;
+}
+#accordion .minus {
+    background: url(../../images/min-icons-golden.png) no-repeat;
+}
+#accordion .plus {
+    background: url(../../images/plus-icons-golden.png) no-repeat;
+}
+.slide-info{
+	background: rgb(131, 88, 35);
+	background: rgba(131, 88, 35, 0.8);
+}
+#prev2{
+	background:url(../../images/banner-arrows-golden.png) no-repeat left top;
+}
+#next2{
+	background:url(../../images/banner-arrows-golden.png) no-repeat right top;
+}
+#logo {
+    background: url(../../images/logo2.png) no-repeat 0 0 ;
+	height: 50px;
+	width: 233px;
+}
+#nav a{
+	background:#976b2e;
+}
+#nav a:hover, #nav a.activeSlide{
+	background:#575757;
+}
+.curves-bg1{
+	background:url(../../images/curves-golden.png) no-repeat left center;
+}
+.curves-bg2{
+	background:url(../../images/curves-golden2.png) no-repeat left center;
+}
+.mega-menu{
+	border-color:#976B2E;
+}
+#main-nav li .mega-menu ul li{
+	background:url(../../images/menu-bulets1.png) no-repeat left;
+}
+.nav-list .title4 a:hover{
+	color: #976b2e !important;
+}
+#main-nav li .mega-menu ul li a:hover, #main-nav li .mega-menu ul li.active a, .nav-list .title4 a.active{
+	color: #976b2e !important;
+}
+.new-ribbon{
+	background:url(../../images/new-sticker-icon3.png) no-repeat;
+}

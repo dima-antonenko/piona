@@ -1,0 +1,11 @@
+<% provide(:title, strip_tags(@text_home.where(name: "Title").first.value) ) %>
+<% provide(:description, @text_home.where(name: "Description").first.value) %>
+<% provide(:keywords, @text_home.where(name: "Keywords").first.value) %>
+
+ <section class="curves-holder">
+<%= render '/static/blocks/slider' %>
+<%= render '/static/blocks/products' %>
+	<hr class="sep-line">
+<%= render '/static/blocks/posts' %>    
+  </section>
+

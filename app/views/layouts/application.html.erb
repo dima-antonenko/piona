@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title><%= yield(:title)  %></title>
+<meta name="description" content="Place your description here">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/shortcode.css" type="text/css" media="all">
+<link rel="stylesheet" name="skins" href="/css/default.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/javascri.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/full-width-gallery.css" type="text/css" media="all">
+<link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/responsive-layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/switcher.css">
+<meta name="keywords" content="<%= yield(:description) %>">
+<meta name="description" content="<%= yield(:keywords) %>">
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= csrf_meta_tags%>
+</head>
+<body>
+<div class="wrapper"> 
+  <%= render '/layouts/header/main' %>
+
+    <%= yield %>
+
+
+ <%= render '/layouts/footer/footer_main' %>
+
+ <%= strip_tags @metrica.where(name: "Код яндекс метрики").first.value %>
+ <br/>
+ <%= strip_tags @metrica.where(name: "Код гугл аналитики").first.value %>
+ 
+<script type="text/javascript" src="/js/jquery-all.js"></script><!-- all files --> 
+<script type="text/javascript" src="/js/jquery-banner.js"></script><!-- Banner JS --> 
+<script type="text/javascript" src="/js/jquery-u.js"></script><!-- jQuery Ui --> 
+<script type="text/javascript" src="/js/sourtin-jquery.js"></script><!-- sourtin Slider --> 
+<script type="text/javascript" src="/js/colortip.js"></script><!-- Colortip Tooltip Plugin  --> 
+<script type="text/javascript" src="/js/tytabs00.js"></script><!-- jQuery Plugin tytabs  --> 
+<script type="text/javascript" src="/js/jquery04.js"></script><!-- jQuery Prettyphoto  --> 
+<script type="text/javascript" src="/js/jquery06.js"></script><!-- UItoTop plugin  --> 
+<script type="text/javascript" src="/js/custom00.js"></script><!-- Custom Js file for javascript in html --> 
+<script type="text/javascript" src="/js/focus.js"></script><!-- text field clear --> 
+<script src="/js/cockies.js"></script> <!-- jQuery cookie --> 
+<script src="/js/styleswi.js"></script> <!-- Style Switcher -->
+
+</body>
+</html>

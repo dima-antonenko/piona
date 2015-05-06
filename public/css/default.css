@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+#top-bar, .b-top-links {
+	border-color:#8c093c;
+}
+#main-nav li a:hover, .post-bar h3 {
+	color: #c0306f;
+}
+
+.sendbtn, .career-list, .comments-icon {
+	background:#c03070;
+}
+.sendbtn:hover, .more-btn:hover, .meter, .pagination li a.prev:hover, .pagination li a.next:hover {
+	background:#eb5094;
+}
+#horizontal-tabs ul.tabs li.current {
+	color:#eb5094;
+}
+.heading-bar, #toggle-view li h3, .dropcap.color, .pagination li a.prev, .pagination li a.next {
+	background:#a82a60;
+}
+.author-art .title, .art-link, .art-link a, .art-bottom, .num-post, .comments li .author-name, .blog-main p a, .status, .cat-title, .t-author {
+	color: #a82a60;
+}
+.b-top-links {
+	border-bottom: 1px solid #c0306f;
+}
+.left-col-list li a:hover {
+	background: url(../images/left-nav-hover.jpg) no-repeat 0 14px;
+	color: #c03070;
+}
+.comm-list label, #accordion h3 a {
+	color: #c03070;
+}
+.post-date {
+	background:#b13f70;
+}
+.comments-icon {
+	border:4px solid #c03070;
+}
+.comments-icon:before, .comments-icon:after, .comments-icon:after {
+	border-top: 7px solid #c03070;
+}
+.title-bar {
+	border-bottom: 3px solid #c0306f;
+}
+.cart-btn {
+	background: url(../images/cart-icon.png) no-repeat 13% 7px #b72e6a;
+}
