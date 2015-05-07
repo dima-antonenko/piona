@@ -1,0 +1,20 @@
+<% if @product_category.product_categories.count > 0 %>
+		 <section class="grid-holder">
+			<section class="grid" id="category-item-holder">
+ 		<% @product_category.product_categories.each do |category| %>
+      		
+      		<% if category.id != @product_category.id %>
+				<figure class="column c-one-third New category-item">
+		          <div class="item-holder">
+		            <div class="inner-holder view view-ninth"><%= image_tag category.avatar.url(:medium) %>
+		              <em class="item-price"><%= link_to category.name, product_category_path(category) %></em>
+		               </div>
+		          </div>
+        		</figure>
+
+			<% end %>
+         <% end %>
+     </section>
+     
+    </section>
+  <% end %> 

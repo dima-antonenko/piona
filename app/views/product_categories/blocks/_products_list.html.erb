@@ -1,15 +1,16 @@
  <section class="grid-holder">
- <% @product_category.products.each do |product| %>
+
       <section class="grid" id="category-item-holder">
+       <% @product_category.products.each do |product| %>
         <figure class="column c-one-third New category-item">
           <div class="item-holder">
-            <div class="inner-holder view view-ninth"> <img src="/images/image06.jpg" alt="">
+            <div class="inner-holder view view-ninth"> <%= image_tag product.avatar.url(:medium) %>
               <em class="item-price"><%= link_to product.name, product_category_product_path(@product_category, product) %></em>
                <span class="comm-btn content"> <%= number_to_currency(product.price, unit: "р.",delimiter: " ' ",  format: "%n %u", precision: 0) %></span></div>
           </div>
         </figure>
 
-        
+     <% end %>    
       </section>
-<% end %>      
+     
     </section>

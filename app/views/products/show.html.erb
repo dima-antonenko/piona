@@ -17,29 +17,16 @@
             <span class="pro-price"><%= number_to_currency(@product.price, unit: "р.",delimiter: " ' ",  format: "%n %u", precision: 0) %></span>
             <ul class="product-list">
               <li>Категория: <span><%= @product.product_category.name %></span></li>
-             
+              <li>Артикул: <span><%= @product.sku %></span></li>
             </ul>
-          </div>
-        </figure>
-      </section>
-    </section>
-    <section class="grid-holder">
-      <section class="grid">
-        <figure class="column product-tab">
-          <article class="author-art main">
-            <div class="author-inner main-1" id="horizontal-tabs">
-              <ul class="tbs tabs">
-                <li id="tab1"><a href="#">Описание</a></li>
-              </ul>
-              <div class="contents">
-                <div id="content1" class="tabscontent">
+            <div id="content1" class="tabscontent">
                   <%= @product.description.html_safe %>
                 </div>
-              </div>
-            </div>
-          </article>
+          </div>
         </figure>
+
       </section>
     </section>
+
   </section>
  
