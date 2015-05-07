@@ -187,7 +187,7 @@ input, select, textarea {
 	position:relative;
 }
 #banner {
-	margin:-31px 0 33px 0;
+	margin:0;
 	position:relative;
 	overflow:hidden;
 }

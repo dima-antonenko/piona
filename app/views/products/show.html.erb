@@ -9,64 +9,96 @@
 <% provide(:title, @product.meta_title) %>
 <% provide(:description, @product.meta_description) %>
 <% provide(:keywords, @product.meta_keywords) %>
-<%= render '/product_categories/blocks/sidebar/sidebar' %>
-  <div id="content">
-    <div class="breadcrumb"></div>
-    <h1><span class="h1-top"><%= @product.name %></span></h1>
-    <div class="product-info">
-      <div class="left">
-        <div class="image">
-          <a href="<%= @product.avatar.url(:medium) %>" title="" class="cloud-zoom" id='zoom1' rel="adjustX: 0, adjustY:0">
-          <%= image_tag @product.avatar.url(:medium), id: "image" %>
-          </a>
-      <div class="zoom"><a id="zoomer" class="colorbox" href="<%= @product.avatar.url(:medium) %>">Увеличить</a></div>
-        </div>
-        <div class="image-additional">
-         <div id="carousel-p">
-        <ul class="jcarousel-skin-tfc">
-        <li>
-        <a href="image/ex/p1-big.jpg" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'image/ex/p1-big.jpg' "><img src="image/ex/p1-small.jpg" title="" alt="" /></a>
-        </li>
-         <li>
-        <a href="image/ex/p2-big.jpg" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'image/ex/p2-big.jpg' "><img src="image/ex/p2-small.jpg" title="" alt="" /></a>
-        </li>
-         <li>
-        <a href="image/ex/p3-big.jpg" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'image/ex/p3-big.jpg' "><img src="image/ex/p3-small.jpg" title="" alt="" /></a>
-        </li>
-         <li>
-        <a href="image/ex/p4-big.jpg" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: 'image/ex/p4-big.jpg' "><img src="image/ex/p4-small.jpg" title="" alt="" /></a>
-        </li>
-        </ul>
-        </div>
-        </div>
-      
-      </div>
-      <div class="right">
-        <div class="description">
-          <div class="price"> <span id="line_s"></span>
-            <p class="wrap_price"> <span class="price-new"><%= number_to_currency(@product.price, unit: "р.",delimiter: " ' ",  format: "%n %u", precision: 0) %></span></p>
+<section class="container">
+  <h2>Product Detail</h2>
+    <section class="grid-holder">
+      <section class="grid">
+        <figure class="column c-one-half">
+          <div class="product-img"> <img src="images/image21.jpg" alt="" /> </div>
+        </figure>
+        <figure class="column c-one-half">
+          <div class="product-detail">
+            <h3>Black Jacket</h3>
+            <span class="pro-price">$329.00</span>
+            <p>Aliquam ornare, justo ut luctus gravida, tortor turpis viverra nisl, ac tristique libero massa luctus odio.
+              Ut varius ultrices quam quis molestie. Integer eu odio sit amet nisl faucibus pulvinar.</p>
+            <div class="add-cart">
+              <div class="ratting">
+                <ul id="s3">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+                <a href="#" class="plus">+</a> <a href="#" class="minus">-</a> </div>
+              <a href="#" class="sendbtn">Add To Cart</a> </div>
+            <ul class="product-list">
+              <li>Category: <span>Outfits.</span></li>
+              <li>Tags: <span>Cloths.</span></li>
+            </ul>
           </div>
-        </div>
-        <div class="desc2"> 
-          <span>Артикул:</span><%= @product.sku %><br>
-          </div>
-        <div class="cart">
-          <div>
-            <%= button_to 'Купить', line_items_path(product_id: @product), { id: "button-cart", class: "button"} %>
-             </div>
-        </div>
-        
-        </div>
-      </div>
-    <div id="tabs" class="htabs"><a href="#tab-description">Описание</a> </div>
-    <div id="tab-description" class="tab-content">
-      <div class="cpt_product_description ">
-        <div>
-          <%= @product.description.html_safe %>
-        </div>
-      </div>
-    </div>
-
-</div>
-<br/>
-</hr>
+        </figure>
+      </section>
+    </section>
+    <section class="grid-holder">
+      <section class="grid">
+        <figure class="column product-tab">
+          <article class="author-art main">
+            <div class="author-inner main-1" id="horizontal-tabs">
+              <ul class="tbs tabs">
+                <li id="tab1"><a href="#">Description</a></li>
+                <li id="tab2"><a href="#">Additional Information</a></li>
+                <li id="tab3"><a href="#">Reviews(0)</a></li>
+              </ul>
+              <div class="contents">
+                <div id="content1" class="tabscontent">
+                  <h3>Product Description</h3>
+                  <h4>Product Description</h4>
+                  <p>If you are a gaming buff, you cannot do without the Sony PS3 Slim 320 GB console. The 320 GB internal memory of this Sony console offers superior-quality performance. Featuring the IBM Cell Broadband Engine, this gaming console ensures faster processing capabilities. Enjoy high-quality graphics with the NVIDIA RSX graphic controller of the Sony PS3 Slim 320 GB. Being Bluetooth-enabled, this Sony console enables you to access and play games from your laptop or other devices. The wireless DualShock 3 controller of this gaming console gives precise movements, adding to the fun.</p>
+                  <h4>Product Features</h4>
+                  <h4>Performs as the player performs</h4>
+                  <p>Your every movement is registered by the motion controller's advanced motion sensors and the PlayStation Eye USB camera. Become the star of a PlayStation Move title and use the motion controller as a blade to slay foes, a bat to hit the winning home run, or a brush to groom your fluffy pet.</p>
+                  <h4>Action you can feel</h4>
+                  <p>The motion controller's color changing sphere and built-in vibration feedback react to your actions and movements to create engaging experiences that are not only reflected on-screen, but also delivered directly to the palm of your hand. Watch as your sphere lights up when you cast the correct spell or mix the perfect paint color. Feel the timer run out or the recoil of your smoking gun.</p>
+                  <h4>Make movement from both hands count</h4>
+                  <p>Expand your gaming abilities even further by using two motion controllers to track movement with both hands. Punch and jab in the boxing ring, block and attack in the gladiator arena, or draw your arrow and release in an archery tournament. There are so many possibilities when actions from both controllers are being tracked.</p>
+                  <h4>Family friendly, social, active, and fun</h4>
+                  <p>There's a fun and exciting experience for everyone. So get moving with the sleek, wireless PlayStation Move motion controller.</p>
+                </div>
+                <div id="content2" class="tabscontent">
+                  <h3>Product Description</h3>
+                  <h4>Product Description</h4>
+                  <p>If you are a gaming buff, you cannot do without the Sony PS3 Slim 320 GB console. The 320 GB internal memory of this Sony console offers superior-quality performance. Featuring the IBM Cell Broadband Engine, this gaming console ensures faster processing capabilities. Enjoy high-quality graphics with the NVIDIA RSX graphic controller of the Sony PS3 Slim 320 GB. Being Bluetooth-enabled, this Sony console enables you to access and play games from your laptop or other devices. The wireless DualShock 3 controller of this gaming console gives precise movements, adding to the fun.</p>
+                  <h4>Product Features</h4>
+                  <h4>Performs as the player performs</h4>
+                  <p>Your every movement is registered by the motion controller's advanced motion sensors and the PlayStation Eye USB camera. Become the star of a PlayStation Move title and use the motion controller as a blade to slay foes, a bat to hit the winning home run, or a brush to groom your fluffy pet.</p>
+                  <h4>Action you can feel</h4>
+                  <p>The motion controller's color changing sphere and built-in vibration feedback react to your actions and movements to create engaging experiences that are not only reflected on-screen, but also delivered directly to the palm of your hand. Watch as your sphere lights up when you cast the correct spell or mix the perfect paint color. Feel the timer run out or the recoil of your smoking gun.</p>
+                  <h4>Make movement from both hands count</h4>
+                  <p>Expand your gaming abilities even further by using two motion controllers to track movement with both hands. Punch and jab in the boxing ring, block and attack in the gladiator arena, or draw your arrow and release in an archery tournament. There are so many possibilities when actions from both controllers are being tracked.</p>
+                  <h4>Family friendly, social, active, and fun</h4>
+                  <p>There's a fun and exciting experience for everyone. So get moving with the sleek, wireless PlayStation Move motion controller.</p>
+                </div>
+                <div id="content3" class="tabscontent">
+                  <h3>Product Description</h3>
+                  <h4>Product Description</h4>
+                  <p>If you are a gaming buff, you cannot do without the Sony PS3 Slim 320 GB console. The 320 GB internal memory of this Sony console offers superior-quality performance. Featuring the IBM Cell Broadband Engine, this gaming console ensures faster processing capabilities. Enjoy high-quality graphics with the NVIDIA RSX graphic controller of the Sony PS3 Slim 320 GB. Being Bluetooth-enabled, this Sony console enables you to access and play games from your laptop or other devices. The wireless DualShock 3 controller of this gaming console gives precise movements, adding to the fun.</p>
+                  <h4>Product Features</h4>
+                  <h4>Performs as the player performs</h4>
+                  <p>Your every movement is registered by the motion controller's advanced motion sensors and the PlayStation Eye USB camera. Become the star of a PlayStation Move title and use the motion controller as a blade to slay foes, a bat to hit the winning home run, or a brush to groom your fluffy pet.</p>
+                  <h4>Action you can feel</h4>
+                  <p>The motion controller's color changing sphere and built-in vibration feedback react to your actions and movements to create engaging experiences that are not only reflected on-screen, but also delivered directly to the palm of your hand. Watch as your sphere lights up when you cast the correct spell or mix the perfect paint color. Feel the timer run out or the recoil of your smoking gun.</p>
+                  <h4>Make movement from both hands count</h4>
+                  <p>Expand your gaming abilities even further by using two motion controllers to track movement with both hands. Punch and jab in the boxing ring, block and attack in the gladiator arena, or draw your arrow and release in an archery tournament. There are so many possibilities when actions from both controllers are being tracked.</p>
+                  <h4>Family friendly, social, active, and fun</h4>
+                  <p>There's a fun and exciting experience for everyone. So get moving with the sleek, wireless PlayStation Move motion controller.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </figure>
+      </section>
+    </section>
+  </section>
+ 
