@@ -1,8 +1,15 @@
 <% provide(:title, @post_category.meta_title) %>
 <% provide(:description, @post_category.meta_description) %>
 <% provide(:keywords, @post_category.meta_keywords) %>
-<div id="container">
-	<%= render('post_categories/blocks/sidebar') %>
-	<%= render('post_categories/blocks/articles_list') %>
-					
-</div>
+<%= render '/layouts/header/mini_header' %>
+  <section class="container">
+  	<h2><%= @post_category.title %></h2>
+    <section class="grid-holder">
+      <section class="grid">
+
+       <%= render('post_categories/blocks/articles_list') %>
+
+       <%= render('post_categories/blocks/sidebar') %>
+      </section>
+    </section>
+  </section>

@@ -1,15 +1,28 @@
 <% provide(:title, @post.meta_title) %>
 <% provide(:description, @post.meta_description) %>
 <% provide(:keywords, @post.meta_keywords) %>
- <%= render('post_categories/blocks/sidebar') %>
-  <div id="content">
-    <h1><span class="h1-top"><%= @post.title %></span></h1>
-    <div class="information_content">
-      <div class="post_item">
-        <p class="post_info">опубликовано <%= @post.updated_at.to_s[2...-4] %></p>
-        <div class="imageborder"><%= image_tag @post.avatar.url(:big) %></div>
-          <%= @post.text.html_safe %>
-       </div>
-      <div class="clear"></div>
-    </div>
-  </div>
+<%= render '/layouts/header/mini_header' %>
+
+
+  <section class="container">
+    <section class="grid-holder">
+      <section class="grid">
+        <figure class="column c-three-fourth">
+          <article class="blog-main">
+        <div class="blog-img"><%= image_tag @post.avatar.url(:big) %>
+        </div>
+           <div class="title-bar">
+            <h3><%= @post.title %></h3>
+            
+           </div>
+           <%= @post.text.html_safe %>
+ 
+          </article>
+          
+        </figure>
+        
+   <%= render('post_categories/blocks/sidebar') %>
+
+      </section>
+    </section>
+  </section>  
