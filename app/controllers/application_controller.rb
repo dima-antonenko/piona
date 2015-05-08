@@ -30,11 +30,11 @@ class ApplicationController < ActionController::Base
   def menu
     @main_menu = Menu.where(place: "main_menu").first
     @product_categories = ProductCategory.all
-    @slider_text = SiteVariable.where(place: "block_in_slider").first.value
+    
   end
 
   def footer
-    @footer_content = SiteVariable.where(place: "footer")
+    @text_footer = SiteVariable.where(place: "footer")
     @metrica = SiteVariable.where(place: "settings")
   end
 

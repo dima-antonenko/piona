@@ -1,36 +1,16 @@
   <section class="container">
-    <h2>Accessories</h2>
+    <h2>Новые поступления</h2>
     <section class="grid-holder">
-      <section class="grid">
-        <figure class="column c-one-third">
+     <section class="grid" id="category-item-holder">
+       <% @products.each do |product| %>
+        <figure class="column c-one-third New category-item">
           <div class="item-holder">
-            <div class="inner-holder view view-ninth"> <img src="/images/image03.jpg" alt=""> <span class="sale-ribbon">On sale1</span> <span class="comm-btn content"> <a href="#" class="add-btn">Add toWishlist</a> <a href="#" class="cart-btn">Add to Cart</a> </span> </div>
-          </div>
-          <div class="item-holder">
-            <div class="inner-holder view view-ninth"> <img src="/images/image04.jpg" alt=""> <span class="sale-ribbon">On sale</span> <span class="comm-btn content"> <a href="#" class="add-btn">Add toWishlist</a> <a href="#" class="cart-btn">Add to Cart</a> </span> </div>
-          </div>
-        </figure>
-        <figure class="column c-one-third">
-          <div class="item-holder">
-            <div class="inner-holder view view-ninth"> <img src="/images/image06.jpg" alt="">
-              <span class="new-ribbon">New</span>
-              <em class="item-price">$35.00   $30.00</em> <span class="comm-btn content"> <a href="#" class="add-btn">Add toWishlist</a> <a href="#" class="cart-btn">Add to Cart</a> </span> </div>
-          </div>
-          <div class="item-holder">
-            <div class="inner-holder view view-ninth"> <img src="/images/image05.jpg" alt=""> <span class="comm-btn content"> <a href="#" class="add-btn">Add toWishlist</a> <a href="#" class="cart-btn">Add to Cart</a> </span> </div>
+            <div class="inner-holder view view-ninth"> <%= image_tag product.avatar.url(:medium) %>
+              <em class="item-price"><%= link_to product.name, product_category_product_path(product.product_category_id, product) %></em>
+               <span class="comm-btn content"> <%= number_to_currency(product.price, unit: "р.",delimiter: " ' ",  format: "%n %u", precision: 0) %></span></div>
           </div>
         </figure>
-        <figure class="column c-one-third">
-          <div class="item-holder">
-            <div class="inner-holder view view-ninth"> <img src="/images/image07.jpg" alt="">
-              <div class="mask mask-1"></div>
-              <span class="sale-ribbon">On sale</span> <span class="comm-btn content"> <a href="#" class="add-btn">Add toWishlist</a> <a href="#" class="cart-btn">Add to Cart</a> </span> </div>
-          </div>
-          <div class="item-holder">
-            <div class="inner-holder view view-ninth"> <img src="/images/image09.jpg" alt="">
-              <span class="new-ribbon">New</span>
-              <span class="comm-btn content"> <a href="#" class="add-btn">Add toWishlist</a> <a href="#" class="cart-btn">Add to Cart</a> </span> </div>
-          </div>
-        </figure>
+
+     <% end %>    
       </section>
     </section>

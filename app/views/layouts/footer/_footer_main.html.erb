@@ -33,22 +33,10 @@
     <section class="grid-holder container">
       <section class="grid">
         <article class="column c-three-fourth contact-box">
-          <h2>Contact Us</h2>
-          <ul class="conatctusul">
-            <li class="address">123 Abington Street City of Westminster, London United Kingdom .</li>
-            <li class="telephone">T : 0845 012 3456</li>
-            <li class="mail"><a href="#">i@yourcompany.com</a></li>
-          </ul>
+          <h2>Контакты</h2>
+         <%=  @text_footer.where(name: "Контакты").first.value %>
         </article>
-        <article class="column c-one-fourth stayconnect"> <span class="sub-title">Stay Contected</span>
-          <ul>
-            <li><a class="facebook" href="#"><span>Facebook</span></a></li>
-            <li><a class="flickr" href="#"><span>Flicker</span></a></li>
-            <li><a class="twitter" href="#"><span>Twitter</span></a></li>
-            <li><a class="skype" href="#"><span>Skype</span></a></li>
-            <li><a class="linkedin" href="#"><span>Linkedin</span></a></li>
-          </ul>
-        </article>
+
       </section>
     </section>
   </section>
