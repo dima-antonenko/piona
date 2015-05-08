@@ -1,7 +1,4 @@
-Ckeditor::Asset.create!([
-  {data_file_name: "nastol_com_ua_113908.jpg", data_content_type: "image/jpeg", data_file_size: 1186780, assetable_id: 1, assetable_type: "User", type: "Ckeditor::Picture", width: 2048, height: 1153},
-  {data_file_name: "nastol_com_ua_113908.jpg", data_content_type: "image/jpeg", data_file_size: 1186780, assetable_id: 1, assetable_type: "User", type: "Ckeditor::Picture", width: 2048, height: 1153}
-])
+
 Menu.create!([
   {title: "Главное меню", place: "main_menu"},
   {title: "Меню в ленте", place: "news_menu"}
@@ -71,8 +68,4 @@ Slide.create!([
 ])
 Slider.create!([
   {title: "Основной слайдер"}
-])
-Ckeditor::Picture.create!([
-  {data_file_name: "nastol_com_ua_113908.jpg", data_content_type: "image/jpeg", data_file_size: 1186780, assetable_id: 1, assetable_type: "User", type: "Ckeditor::Picture", width: 2048, height: 1153},
-  {data_file_name: "nastol_com_ua_113908.jpg", data_content_type: "image/jpeg", data_file_size: 1186780, assetable_id: 1, assetable_type: "User", type: "Ckeditor::Picture", width: 2048, height: 1153}
 ])
