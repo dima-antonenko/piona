@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
  
-set :application,  'ddvorik'
-set :repo_url,     'https://github.com/dima-antonenko/ddvorik.git'
+set :application,  'piona'
+set :repo_url,     'https://github.com/dima-antonenko/piona.git'
  
 set :shared_path,  "/home/#{fetch(:user)}/projects/#{fetch(:application)}/shared"
 set :bundle_dir,   File.join(fetch(:shared_path), 'gems')
@@ -19,7 +19,9 @@ set :rake,             -> { "#{fetch(:bundle_cmd)} exec rake" }
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
  
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/#{fetch(:user)}/projects/#{fetch(:application)}"
+set :deploy_to, "/home/#{fetch(:user)}/projects/#{fetch(:application)}" 
+
+set :linked_dirs, %w{app/views/instances/custom public/assets/ckeditor}
  
 # Default value for :scm is :git
 # set :scm, :git
@@ -78,6 +80,18 @@ namespace :deploy do
       execute "cd #{fetch(:deploy_to)}/current; #{fetch(:rake)} db:seed RAILS_ENV=#{fetch(:rails_env)}"
     end
   end
+
+  require 'fileutils'
+
+  desc "Create nondigest versions of all ckeditor digest assets"
+  task "assets:precompile" do
+    fingerprint = /\-[0-9a-f]{32}\./
+    for file in Dir["public/assets/ckeditor/**/*"]
+      next unless file =~ fingerprint
+      nondigest = file.sub fingerprint, '.'
+      FileUtils.cp file, nondigest, verbose: true
+    end
+  end
  
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
@@ -88,20 +102,10 @@ namespace :deploy do
     end
   end
 
-   desc "build missing paperclip styles"
-  task :build_missing_paperclip_styles do
-    on roles(:app) do
-      within release_path do
-        with rails_env: fetch(:rails_env) do
-          execute :rake, "paperclip:refresh:missing_styles"
-        end
-      end
-    end
-  end
+
 
   after :finishing, 'deploy:cleanup'
-  
+
 
 end
 
-after("deploy:compile_assets", "deploy:build_missing_paperclip_styles")
