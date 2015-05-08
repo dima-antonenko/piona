@@ -2,11 +2,16 @@
 <% provide(:description, @text_contacts.where(name: "Description").first.value) %>
 <% provide(:keywords, @text_contacts.where(name: "Keywords").first.value) %>
 
-<div id="content">
-    <h1><span class="h1-top">Контакты</span></h1>
-    <div class="information_content">
-      <div>
-      	<%= @text_contacts.where(name:"Содержимое страницы контакты").first.value.html_safe %>
-      </div>
-    </div>
-  </div>
+<%= render '/layouts/header/mini_header' %>
+<section class="container">
+    <section class="grid-holder">
+        <section class="grid w-padd">
+          <figure class="column c-three-fourth">
+            <article>
+              <h3>Контакты</h3>
+              <%= @text_contacts.where(name:"Содержимое страницы контакты").first.value.html_safe %>
+            </article>
+          </figure>
+        </section>
+      </section>
+  </section>
