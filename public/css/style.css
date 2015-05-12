@@ -955,7 +955,8 @@ ul.innerslide li .caption p {
 	line-height:50px;
 	margin:0 auto;
 	font-size:12px;
-	padding:10px 0;
+	padding:7px 0;
+	text-align: center;
 }
 .footermaincon a{
 	color:#fff;
@@ -1950,4 +1951,12 @@ iframe{
 
 .product-list{
 	padding-bottom: 45px;
+}
+
+.footer-mid-bg{
+	background: url("../images/footer-pattern.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.footer-top{
+	min-height: 275px !important;
 }
